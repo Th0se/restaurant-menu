@@ -1,5 +1,49 @@
+@font-face {
+    font-family: 'Major';
+    src: url(./Oswald-VariableFont_wght.ttf);
+}
+
+:root {
+    --HeaderColor: rgb(231, 239, 49);
+    --bodyColor: rgb(237, 244, 103);
+}
+
 #tabContainer {
     width: 100%;
     height: 5rem;
-    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 4px;
+    background-color: var(--HeaderColor);
+}
+
+.tabItem {
+    width: 9rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Major';
+    box-sizing: border-box;
+}
+
+.tabItem:hover {
+    box-shadow: 0 0 50px 30px #FF2400;
+}
+#tabHome {
+    grid-column: 2/3;
+}
+
+#tabMenu {
+    grid-column: 3/4;
+}
+
+#tabContacts {
+    grid-column: 4/5;
+}
+
+.activeTab {
+    border: solid #FF2400;
 }
