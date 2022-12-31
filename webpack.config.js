@@ -2,11 +2,24 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
   },
-  modules: {
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Restaurant menu',
+    }),
+  ],
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
+  optimization: {
+    runtimeChunk: 'single',
+  },
+  module: {
     rules: [
       {
         test: /\.css$/i,
