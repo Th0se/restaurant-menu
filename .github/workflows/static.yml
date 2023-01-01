@@ -39,7 +39,7 @@ jobs:
         with:
           # Upload the contents of the dist folder as an artifact
           name: dist
-          path: ./dist
+          path: dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
