@@ -5,6 +5,7 @@
 
 :root {
     --HeaderColor: rgb(231, 239, 49);
+    --activeTabColor: rgb(192, 206, 6);
     --bodyColor: rgb(237, 244, 103);
 }
 
@@ -45,5 +46,5 @@
 }
 
 .activeTab {
-    border: solid #FF2400;
+    background-color: var(--activeTabColor);
 }

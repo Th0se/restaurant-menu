@@ -9,6 +9,9 @@
     "start": "webpack serve --open",
     "build": "webpack"
   },
+  "publish": {
+    "src": "dist"
+  },  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Th0se/restaurant-menu.git"
