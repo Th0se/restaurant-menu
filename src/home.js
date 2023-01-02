@@ -47,10 +47,11 @@ const restaurantSchedule = () => {
     
 
     return container;
-}
+};
 
 const homeTabContainer = () => {
     const container = document.createElement(`div`);
+    container.setAttribute(`id`, `homeTabContainer`);
 
     const exposition = restaurantExposition();
     container.appendChild(exposition);
@@ -61,7 +62,6 @@ const homeTabContainer = () => {
 
     return container;
 };
-
 
 
 export {restaurantExposition, homeTabContainer, restaurantSchedule};
