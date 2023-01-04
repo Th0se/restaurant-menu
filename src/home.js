@@ -3,9 +3,10 @@ const restaurantExposition = () => {
     container.setAttribute(`id`, `expositionContainer`);
 
     const content = document.createElement(`p`);
-    content.textContent = `Welcome to Melty's Kitchen, where we offer a range of warm, gooey and hearty,
+    content.textContent = `Welcome to Melty's Kitchen, where we offer a range of warm, gooey meals and hearty,
                                 meaty dishes, as well as a variety of beverages. We use fresh ingredients and 
-                                strive to provide the best possible dining experience in a cozy atmosphere.`;
+                                strive to provide the best possible dining experience in a cozy atmosphere.
+                                Please see our schedule below:`;
     container.appendChild(content);
 
 

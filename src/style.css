@@ -9,17 +9,22 @@
     --bodyColor: rgb(237, 244, 103);
 }
 
+body {
+    margin: 0;
+}
+
 #tabContainer {
     height: 5rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 4px;
     background-color: var(--HeaderColor);
 }
 
 .tabItem {
     width: 9rem;
-    height: 5rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +32,7 @@
     font-weight: 500;
     font-family: 'Major';
     box-sizing: border-box;
+    grid-row: 2/5;
 }
 
 .tabItem:hover {
@@ -49,15 +55,85 @@
 }
 
 #contentContainer {
-    position: relative;
     height: 40rem;
+    background-color: var(--bodyColor);
+    position: relative;
 }
 
 #homeTabContainer,
 #menuTabContainer,
 #contactTabContainer {
     position: absolute;
+    top: 35%;
     left: 50%;
-    top: 50%;
     transform: translate(-50%, -50%);
+}
+
+#menuTabContainer {
+    height: 40rem;
+    width: clamp(40rem, 70%, 70rem);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    top: 50% !important;
+}
+
+.menuContainer {
+    margin-top: 3rem;
+    font-weight: 230;
+    line-height: 1;
+}
+
+.menuContainer li {
+    margin-top: 1rem;
+}
+
+#homeTabContainer {
+    height: 20rem;
+}
+
+#expositionContainer {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+#scheduleContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3px;
+}
+
+#weekdayContainer {
+    grid-column: 1/2;
+}
+
+#weekendContainer {
+    grid-column: 2/3;
+}
+
+#weekendContainer,
+#weekdayContainer {
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 3px;
+    font-size: 2rem;
+}
+
+#contactTabContainer {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 20rem;
+}
+
+#contactTabContainer * {
+    font-size: 2rem;
+}
+
+#phoneContainer {
+    grid-row: 1/2;
+}
+
+#emailContainer {
+    grid-row: 3/4;
 }
